@@ -1,0 +1,58 @@
+.btn-primary,
+        .text-primary {
+            color: #000000 !important; /* Purple color */
+        }
+
+        .btn-outline-primary {
+            border-color: #6A0DAD !important; /* Purple color */
+        }
+/* Additional customizations */
+
+
+
+
+.table tbody tr:hover {
+  background-color: #f2f2f2; /* Light gray background color on hover */
+}
+
+.table tbody td {
+  vertical-align: middle; /* Center align content vertically */
+}
+
+.btn-outline-primary:hover {
+  color: #ffffff !important; /* White text color on hover for outline button */
+  background-color: #6A0DAD !important; /* Purple background color on hover for outline button */
+}
+
+.btn-outline-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(106, 13, 173, 0.5); /* Purple focus outline for outline button */
+}
+
+.btn-outline-secondary {
+  border-color: #6A0DAD !important; /* Purple border color for secondary outline button */
+  color: #6A0DAD !important; /* Purple text color for secondary outline button */
+}
+
+.btn-outline-secondary:hover {
+  color: #ffffff !important; /* White text color on hover for secondary outline button */
+  background-color: #6A0DAD !important; /* Purple background color on hover for secondary outline button */
+}
+
+.btn-outline-secondary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(106, 13, 173, 0.5); /* Purple focus outline for secondary outline button */
+}
+/* Additional customizations */
+.table .btn-outline-primary,
+.table .btn-outline-primary:hover,
+.table .btn-outline-primary:focus {
+    color: #6A0DAD !important; /* Purple text color for "Claim" button */
+    border-color: #6A0DAD !important; /* Purple border color for "Claim" button */
+}
+
+.table .btn-outline-primary:hover {
+    background-color: transparent !important; /* Remove background color on hover for "Claim" button */
+}
+
+.table .btn-outline-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(106, 13, 173, 0.5); /* Purple focus outline for "Claim" button */
+}

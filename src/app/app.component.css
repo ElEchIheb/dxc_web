@@ -1,0 +1,12 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    color: #67757c;
+    font-weight: 300;
+    background: #eef5f9 !important;
+}
+.user-profile
+{
+    background-size: cover !important;
+}

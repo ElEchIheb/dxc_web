@@ -1,0 +1,24 @@
+<form [formGroup]="compagneForm"style="height: 125px">
+  <h1 mat-dialog-title>{{ inputdata.title }}</h1>
+  <div mat-dialog-content>
+  <div fxLayout="row wrap" class="align-items-center">
+    <div fxFlex="100" fxFlex.gt-md="95">
+  <mat-form-field appearance="outline">
+    <input matInput placeholder="Campagne year" formControlName="date" readonly (click)="picker.open()">
+    <input type="hidden" [matDatepicker]="picker" readonly>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker panelClass="year-only-picker" (yearSelected)="_yearSelectedHandler($event,picker)"
+                    startView="multi-year" #picker></mat-datepicker>
+    <small *ngIf="compagneForm.controls['date'].hasError('required') && compagneForm.controls['date'].touched"
+           class="text-danger support-text">Champ obligatoire
+    </small>
+  </mat-form-field>
+    </div>
+  </div>
+</div>
+
+  <div mat-dialog-actions align="end">
+    <button (click)="cancel()" mat-button color="warn">Close</button>
+    <button mat-button color="primary" (click)="saveCampagne()" [disabled]="!compagneForm.valid">Save</button>
+  </div>
+</form>

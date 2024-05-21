@@ -1,0 +1,46 @@
+<h2 class="font-medium" mat-dialog-title><strong>Edit Team</strong></h2>
+<mat-dialog-content class="pb-3">
+  <form #userForm="ngForm" [formGroup]="myform">
+    <div fxLayout="row wrap" class="align-items-center">
+      <div fxFlex="100" fxFlex.gt-md="50">
+        <div class="m-r-15 m-l-15">
+          <mat-form-field appearance="outline">
+            <mat-label>Team Name</mat-label>
+            <input type="text" matInput required id="teamName" name="teamName" placeholder="teamName"
+              formControlName="teamName">
+          </mat-form-field>
+        </div>
+      </div>
+      <div fxFlex="100" fxFlex.gt-md="50">
+        <div class="m-r-15 m-l-15">
+          <mat-form-field appearance="outline">
+            <mat-label>Manager</mat-label>
+            <mat-select required  [value]="selectedCategory" formControlName="newManagerId">
+              <mat-option value="{{inputdata.managerId}}" selected>{{inputdata.manager}}</mat-option>
+              <mat-option *ngFor="let option of userOptions" [value]="option.value">{{ option.label }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div fxFlex="100" fxFlex.gt-md="100">
+        <div class="m-r-15 m-l-15">
+          <mat-form-field appearance="outline">
+            <mat-label>Team members</mat-label>
+            <mat-select [formControl]="myform.get('Collaborators')"  multiple formControlName="Collaborators">
+              <mat-option *ngFor="let member of teamMember" [value]="member.id">{{ member.fullName }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <p class="text-italic font-small-2 mt-1">
+            Total Team members : {{ collaboratorsSelected.value.length }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="but">
+      <button mat-button (click)="Cancel()" color="warn">Cancel</button>
+      <button mat-button (click)="UpdateTeam()" mat-button color="primary" [disabled]="!userForm.valid">Update</button>
+    </div>
+  </form>

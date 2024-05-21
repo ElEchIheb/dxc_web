@@ -1,0 +1,127 @@
+
+<h2 class="font-medium" mat-dialog-title><strong>Add</strong></h2>
+<mat-dialog-content class="pb-3" >
+    <form #userForm="ngForm" [formGroup]="myform">
+        <div class="d-flex align-items-center m-b-15">
+            <img class="mat-card-avatar" [src]="local_data.imagePath">
+            <button mat-button color="primary" class="m-l-15 input-file-button" >
+                <input type="file" (change)="selectFile($event)" #fileInput formControlName="file">
+            </button>
+        </div>
+        <div fxLayout="row wrap" class="align-items-center">
+            <div fxFlex="100" fxFlex.gt-md="50">
+                <div class="m-r-15 m-l-15">
+                    <mat-form-field appearance="outline">
+                      <mat-label>First Name</mat-label>
+                        <input type="text" matInput required id="firstName" name="firstName"
+                            placeholder="firstName" formControlName="firstName">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div fxFlex="100" fxFlex.gt-md="50">
+                <div class="m-r-15 m-l-15">
+                    <mat-form-field appearance="outline">
+                      <mat-label>LastName</mat-label>
+                        <input type="text" matInput required id="lastName" name="lastName"
+                            placeholder="LastName" formControlName="lastName">
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div fxFlex="100" fxFlex.gt-md="50">
+                <div class="m-r-15 m-l-15">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Telephone</mat-label>
+                        <input type="text" matInput  id="telephone" name="telephone"
+                            placeholder="telephone" formControlName="telephone" >
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxFlex="100" fxFlex.gt-md="50">
+              <div class="m-r-15 m-l-15">
+                  <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input type="text" matInput required id="email" name="email"
+                    placeholder="email" formControlName="email">
+                  </mat-form-field>
+              </div>
+          </div>
+            <div fxFlex="100" fxFlex.gt-md="50" *ngIf="isshowDepartment">
+                <div class="m-r-15 m-l-15">
+                  <mat-form-field appearance="outline">
+                    <mat-label>select  department</mat-label>
+                    <mat-select required  formControlName="departmentId" >
+                      <mat-option *ngFor="let option of departmentOptions" [value]="option.value">{{ option.label }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+            </div>
+            <div fxFlex="100" fxFlex.gt-md="50" *ngIf="isShowRoleAndTeam">
+              <div class="m-r-15 m-l-15">
+                <mat-form-field appearance="outline" >
+                  <mat-label>select  Team</mat-label>
+                  <mat-select   formControlName="teamId" >
+                    <mat-option *ngFor="let option of teamOptions" [value]="option.value">{{ option.label }}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+          </div>
+          <div fxFlex="100" fxFlex.gt-md="50" *ngIf="isShowRoleAndTeam">
+            <div class="m-r-15 m-l-15">
+              <mat-form-field appearance="outline">
+                <mat-label>select  Role</mat-label>
+                <mat-select required  formControlName="roleId" (selectionChange)="getTeamsByRole($event.value)">
+                  <mat-option *ngFor="let option of listRole" [value]="option.id" >{{ option.roleName }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+        </div>
+            <div fxFlex="100" fxFlex.gt-md="50">
+                <div class="m-r-15 m-l-15">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Select  Poste</mat-label>
+                      <mat-select required  formControlName="posteId">
+                        <mat-option *ngFor="let option of posteOptions" [value]="option.value" >{{ option.label }}</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+
+          <div fxFlex="100" fxFlex.gt-md="30" >
+              <div class="m-r-15 m-l-15" >
+                  <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input type="password" matInput required id="password"
+                     formControlName="password">
+
+                  </mat-form-field>
+              </div>
+          </div>
+          <div fxFlex="100" fxFlex.gt-md="20" >
+            <div class="m-r-15 m-l-15" >
+              <button class="btn" (click)="randomPassword()">
+               Generate
+            </button>
+
+
+              </div>
+          </div>
+
+            <div fxFlex="100" fxFlex.gt-md="50" class="buttradio">
+              <div class="m-r-15 m-l-15">
+                <mat-radio-group aria-label="Select an option" formControlName="gender">
+                  <mat-radio-button value="M">Male</mat-radio-button>
+                  <mat-radio-button value="F">female</mat-radio-button>
+                </mat-radio-group>
+              </div>
+              </div>
+        </div>
+        <br><br>
+        <div class="but">
+        <button mat-button (click)="closeDialog()">Cancel</button>
+        <button mat-button (click)="SaveUser()" mat-button color="primary"
+            [disabled]="!userForm.valid">Save</button>
+      </div>
+    </form>
+

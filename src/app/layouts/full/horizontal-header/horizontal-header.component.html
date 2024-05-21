@@ -1,0 +1,29 @@
+
+<div class="languagePage">
+
+
+  <button [matMenuTriggerFor]="flags" mat-icon-button class="m-r-5">
+  </button>
+  <mat-menu #flags="matMenu" class="mymegamenu">
+
+  </mat-menu>
+
+  <!-- Profile - style you can find in header.scss -->
+  <button [matMenuTriggerFor]="profile" class="setting-btn">
+    <span class="bar bar1"></span>
+    <span class="bar bar2"></span>
+    <span class="bar bar1"></span>
+  </button>
+  <mat-menu #profile="matMenu" class="mymegamenu">
+    <button mat-menu-item [routerLink]="['/profile']" >
+      <mat-icon>account_box</mat-icon> Profile
+    </button>
+    <button mat-menu-item  [routerLink]="['/security']">
+      <mat-icon>https icon</mat-icon> Security
+    </button>
+    <button mat-menu-item (click)="logout()">
+      <mat-icon>exit_to_app</mat-icon> Sign Out
+    </button>
+  </mat-menu>
+</div>
+

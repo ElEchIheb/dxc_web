@@ -1,0 +1,319 @@
+/*
+Template Name: Material Pro Admin
+Author: Wrappixel
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+
+/*******************
+ Topbar
+*******************/
+mat-toolbar {
+  box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.5);
+
+
+
+  &.topbar {
+
+    padding: 0px 15px;
+  }
+  .navbar-header {
+
+    text-align: center;
+    .navbar-brand {
+      display: flex;
+      line-height: 18px;
+
+      align-items: center;
+      .dark-logo {
+        display: none;
+      }
+      b {
+        margin-right: 5px;
+      }
+      img {
+      }
+      .light-logo{
+        height: 130px;
+        margin: -5px 0px 0px -33px;
+        width: 257px;
+      }
+    }
+  }
+
+  .app-search {
+    display: none;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0;
+    z-index: 99;
+    position: absolute;
+    .form-control {
+      line-height: 42px;
+    }
+    .cl-srh-btn {
+      position: absolute;
+      top: 12px;
+      right: 15px;
+      font-size: 15px;
+      color: $bodytext;
+      cursor: pointer;
+    }
+  }
+  .search-box{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    top: 79px;
+  }
+  .profileIcon{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    top: 42px;
+  }
+  .languagePage{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    top: 42px;
+  }
+  .buttonmenu{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    top: 42px;
+  }
+  .input-search{
+    height: 20px;
+    width: 20px;
+    border-style: none;
+    padding: 15px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    background-color: #1e88e5;
+    padding-right: 15px;
+    color:#0d0d0d;
+  }
+  .input-search::placeholder{
+    color:rgba(16, 15, 15, 0.5);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+  }
+  .btn-search{
+    width: 20px;
+    height: 20px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 5px;
+    color:#ffffff ;
+    background-color:transparent;
+    pointer-events: painted;
+  }
+  .btn-search:focus ~ .input-search{
+    width: 300px;
+    border-radius: 0px;
+    background-color:#1e88e5 ;
+    border-bottom:1px solid #0286f9;
+    transition: all 500ms #1e88e5;
+  }
+  .input-search:focus{
+    width: 300px;
+    border-radius: 0px;
+    background-color:#1e88e5 ;
+    border-bottom:1px solid #1e88e5;
+    transition: all 500ms #1e88e5;
+  }
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+  }
+  .app-search.show-search {
+    display: block;
+  }
+}
+/*******************
+ Topbar
+*******************/
+.topbar {
+  position: relative;
+
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+.example-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+}
+
+.example-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+}
+
+/*******************
+Notify
+*******************/
+
+.notify {
+  position: relative;
+  top: -19px;
+  right: 0;
+}
+
+.heartbit {
+  position: absolute;
+  top: -22px;
+  right: -4px;
+  height: 25px;
+  width: 25px;
+  z-index: 10;
+  border: 5px solid $danger;
+  border-radius: 70px;
+  -moz-animation: heartbit 1s ease-out;
+  animation: heartbit 1s ease-out;
+  -moz-animation-iteration-count: infinite;
+  -o-animation: heartbit 1s ease-out;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation: heartbit 1s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.setting-btn {
+  width: 34px;
+  height: 31px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color:  #340073;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0px 0px 0px 2px rgb(212, 209, 255);
+  margin-top: -34.5px;
+    margin-left: 42px;
+}
+.bar {
+  width: 50%;
+  height: 2px;
+  background-color: rgb(229, 229, 229);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 2px;
+}
+.bar::before {
+  content: "";
+  width: 2px;
+  height: 2px;
+  background-color: #ef9c28;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: all 0.3s;
+  box-shadow: 0px 0px 5px white;
+}
+.bar1::before {
+  transform: translateX(-4px);
+}
+.bar2::before {
+  transform: translateX(4px);
+}
+.setting-btn:hover .bar1::before {
+  transform: translateX(4px);
+}
+.setting-btn:hover .bar2::before {
+  transform: translateX(-4px);
+}
+
+@-moz-keyframes heartbit {
+  0% {
+    -moz-transform: scale(0);
+    opacity: 0;
+  }
+  25% {
+    -moz-transform: scale(0.1);
+    opacity: 0.1;
+  }
+  50% {
+    -moz-transform: scale(0.5);
+    opacity: 0.3;
+  }
+  75% {
+    -moz-transform: scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    -moz-transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes heartbit {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  25% {
+    transform: scale(0.1);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(0.5);
+    opacity: 0.3;
+  }
+  75% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes heartbit {
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: scale(0.1);
+    opacity: 0.1;
+  }
+  50% {
+    -webkit-transform: scale(0.5);
+    opacity: 0.3;
+  }
+  75% {
+    -webkit-transform: scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 374px) {
+  .srh-btn {
+    display: none !important;
+  }
+}

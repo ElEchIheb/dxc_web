@@ -1,0 +1,35 @@
+<form [formGroup]="myform">
+  <h1 mat-dialog-title>{{ inputdata.title }}</h1>
+  <div mat-dialog-content>
+    <div fxLayout="row wrap" class="align-items-center">
+      <div fxFlex="100" fxFlex.gt-md="95">
+    <mat-form-field appearance="outline">
+      <mat-label>Poste</mat-label>
+      <input matInput formControlName="posteName">
+    </mat-form-field>
+    </div>
+    </div>
+    <div fxLayout="row wrap" class="align-items-center">
+      <div fxFlex="100" fxFlex.gt-md="95">
+    <mat-form-field appearance="outline">
+      <mat-label>date de création
+      </mat-label>
+      <input matInput formControlName="sickLeave">
+    </mat-form-field>
+      </div>
+      </div>
+      <div fxLayout="row wrap" class="align-items-center">
+        <div fxFlex="100" fxFlex.gt-md="95">
+    <mat-form-field appearance="outline">
+      <mat-label>début d'activité
+      </mat-label>
+      <input matInput formControlName="leave">
+    </mat-form-field>
+    </div>
+      </div>
+  </div>
+  <div mat-dialog-actions align="end">
+    <button (click)="Cancel()" mat-button color="warn">Close</button>
+    <button mat-button type="submit" color="primary" [disabled]="!myform.valid" (click)="Saveposte()">Update</button>
+  </div>
+</form>

@@ -1,0 +1,1 @@
+export const EMAIL_ALREADY_EXIST = 'email_already_exist';

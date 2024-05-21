@@ -1,0 +1,28 @@
+.piechart {
+  height: 300px;
+  width: 280px;
+  margin: 0 auto;
+}
+.date-time-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.date-time {
+  color: #333333; /* Dark gray text color */
+  font-size: 24px;
+  margin-bottom: 10px; /* Spacing between date and time */
+}
+
+.date {
+  font-weight: bold;
+  color: #007bff; /* DxC Technology blue */
+}
+
+.time {
+  font-weight: bold;
+}

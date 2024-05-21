@@ -1,0 +1,86 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-primary">
+                      <h4 class="card-title ">Bulletin de Soins</h4>
+                  </div>
+                  <div class="card-body">
+
+                    <div class="form-section">
+
+                        <form  (submit)="onSubmit()" >
+
+
+                            <div>
+                                <label for="marque">Marque</label>
+                                <input type="text" id="marque" name="marque" required>
+                            </div>
+                            <div>
+                                <label for="refBS">Réf BS *</label>
+                                <input type="text" id="refBS" name="refBS" required>
+                            </div>
+                            <div>
+                                <label for="nomAdherent">Nom/Prénom de l'Adhérent *</label>
+                                <input type="text" id="nomAdherent" name="nomAdherent" required>
+                            </div>
+                            <div>
+                                <label for="prenomMalade">Prénom du Malade *</label>
+                                <input type="text" id="prenomMalade" name="prenomMalade" required>
+                            </div>
+                            <div>
+                                <label for="dateSoins">Date des Soins *</label>
+                                <input type="date" id="dateSoins" name="dateSoins" required>
+                            </div>
+                            <div>
+                                <label for="honoraires">Honoraires</label>
+                                <input type="text" id="honoraires" name="honoraires">
+                            </div>
+                            <div>
+                                <label for="pharmacie">Pharmacie</label>
+                                <input type="text" id="pharmacie" name="pharmacie">
+                            </div>
+                            <div>
+                                <label for="analyse">Analyse</label>
+                                <input type="text" id="analyse" name="analyse">
+                            </div>
+                            
+                            <div>
+                                <label for="materniteFraisClinique">Maternité/Frais Clinique</label>
+                                <input type="text" id="materniteFraisClinique" name="materniteFraisClinique">
+                            </div>
+                            <div>
+                                <label for="chirurgie">Chirurgie</label>
+                                <input type="text" id="chirurgie" name="chirurgie">
+                            </div>
+                            <div>
+                                <label for="inject">Inject.</label>
+                                <input type="text" id="inject" name="inject">
+                            </div>
+                            <div>
+                                <label for="dent">Dent.</label>
+                                <input type="text" id="dent" name="dent">
+                            </div>
+                            <div>
+                                <label for="monture">Monture</label>
+                                <input type="text" id="monture" name="monture">
+                            </div>
+                            <div>
+                                <label for="total">Total</label>
+                                <input type="text" id="total" name="total">
+                            </div>
+                            <div>
+                                <button type="submit">Envoyer</button>
+                                &nbsp;&nbsp;&nbsp;
+                                <button type="button">Annuler</button>
+                            </div>
+                        </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</div>

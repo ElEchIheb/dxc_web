@@ -1,0 +1,19 @@
+
+  .example-full-width {
+    width: 100%;
+  }
+  
+  td {
+    padding-right: 8px;
+  }
+ mat-button-wrapper {
+    width: 100%;
+  
+    span {
+      float: left;
+    }
+  
+    fa-icon {
+      float: right;
+    }
+  }

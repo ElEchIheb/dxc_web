@@ -1,0 +1,34 @@
+
+<div class="container">
+  <div class="left">
+    <div class="header">
+      <h2 class="animation a1">Change password</h2>
+      <h4 class="animation a2">Protect your account with a strong and unique password.We recommend changing your password regularly</h4>
+    </div>
+    <form #userForm="ngForm" [formGroup]="myform">
+    <div class="form">
+      <mat-form-field appearance="outline" class="input-field animation a3">
+        <mat-label class="animation a3">Old password</mat-label>
+      <input matInput type="password" class="animation a3" required formControlName="oldPassword" placeholder="Email Address">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="input-field animation a3">
+      <mat-label class="animation a3">New password</mat-label>
+      <input matInput  type="{{hide ? 'password' : 'text'}}" required class=" animation a3" formControlName="newPassword" id="password" >
+      </mat-form-field>
+      <mat-icon matSuffix class="myIcon animation a3" (click)="togglePasswordVisibility()">{{eyeIcon}}</mat-icon>
+      <mat-form-field appearance="outline" class="input-field animation a3">
+        <mat-label class="animation a3">Confirm password</mat-label>
+      <input matInput type="{{hideConfirmation? 'password' : 'text'}}" required formControlName="confirmPassword" class="animation a4" placeholder="Password" >
+      <mat-error *ngIf="myform.hasError('passwordsDoNotMatch')">
+        Confirm password doesn't match
+      </mat-error>
+    </mat-form-field>
+    <mat-icon matSuffix class="myIcon animation a3" (click)="togglePasswordVisibilityconfirmation()">{{eyeIconConfirmation}}</mat-icon>
+      <button  (click)="updatePassword()" class="animation a6" [disabled]="!userForm.valid">Change password</button>
+    </div>
+  </form>
+  </div>
+  <div class="right"></div>
+</div>
+
+

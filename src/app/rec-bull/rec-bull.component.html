@@ -1,0 +1,45 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-primary">
+            <h4 class="card-title ">Page d'administration des assurances</h4>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <br>
+              <button class="btn btn-outline-success btn-sm my-2 my-sm-0" type="submit" (click)="downloadCSV()">Extract Request (CSV)/(ALL)</button>
+              <br><br>
+
+              <table class="table">
+                <thead class=" text-primary">
+                  <th>Réf BS</th>
+                  <th>Date des Soins</th>
+                  <th>Nom/Prénom de l'Adhérent</th>
+                  <th>Prénom du Malade</th>
+                  <th>pharmacie</th>
+                  <th>Total</th>
+                  <th>Claim</th>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let bulletin of bulletins">
+                    <td>{{ bulletin.refBS }}</td>
+                    <td>{{ bulletin.dateSoins }}</td>
+                    <td>{{ bulletin.nomAdherent }}</td>
+                    <td>{{ bulletin.prenomMalade }}</td>
+                    <td>{{ bulletin.pharmacie }}</td>
+                    <td>{{ bulletin.total }}</td>
+                    <td>
+                      <button class="btn btn-outline-info btn-sm my-2 my-sm-0" (click)="downloadSingleRowCSV(bulletin.refBS)">Claim</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

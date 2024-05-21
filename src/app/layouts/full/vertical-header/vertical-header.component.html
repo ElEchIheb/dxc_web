@@ -1,0 +1,29 @@
+
+
+<!-- ============================================================== -->
+<!-- Notification - style you can find in header.scss -->
+<!-- ============================================================== -->
+
+<!-- ============================================================== -->
+<!-- Profile - style you can find in header.scss -->
+<!-- ============================================================== -->
+
+
+<!-- ============================================================== -->
+<!-- Profile - style you can find in header.scss -->
+<!-- ============================================================== -->
+<div class="profileIcon">
+<button [matMenuTriggerFor]="profile" mat-icon-button  style="width: 44px;border-radius: 50%;font-weight:bold;background-color: #e51edb;"class="profile-title m-r-5">
+ {{Usercase}}</button>
+<mat-menu #profile="matMenu" class="mymegamenu" >
+    <button mat-menu-item [routerLink]="['/profile']">
+        <mat-icon>https icon</mat-icon> {{nameUser}}
+    </button>
+    <button mat-menu-item  [routerLink]="['/security']">
+      <mat-icon>https icon</mat-icon> Security
+  </button>
+    <button mat-menu-item (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon> Sign Out
+    </button>
+</mat-menu>
+</div>

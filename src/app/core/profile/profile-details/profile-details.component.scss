@@ -1,0 +1,216 @@
+* { box-sizing: border-box; }
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap');
+
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 89vh;
+
+}
+
+.left {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  animation-name: left;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+}
+
+.right {
+  flex: 1;
+  background-color: black;
+  transition: 0s;
+  background-image: url(../../../../assets/images/dxc-tech.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+text{
+  margin-left: 50%;
+}
+.header > .pp{
+  position: relative;
+}
+.header > .pp > h2 {
+  margin: -2px -22px 4px 74px;
+  color: #4f46a5;
+
+}
+
+.header > .pp > h4 {
+  margin-top: 10px;
+  font-weight: normal;
+  font-size: 13px;
+  color: rgba(0,0,0,.4);
+  margin: -2px -22px 4px 80px;
+}
+.header  button > img {
+  height: 91px !important;
+  width: 50px;
+  background-color: transparent;
+  width: calc(277% + 33px);
+  margin: -42px -17px -94px -23px;
+  border-radius: 167px;
+  transition: filter 0.3s ease;
+}
+.image-container {
+  height: 91px !important;
+  width: 50px;
+  background-color: transparent;
+  width: calc(277% + 33px);
+  margin: -42px -17px -94px -23px;
+  border-radius: 167px;
+  transition: filter 0.3s ease;
+}
+
+.inputrightsickleave{
+  width:  60%;
+  margin-top: -95px;
+  margin-left: 209px;
+}
+
+.image-container > img {
+  position: absolute;
+  top: 11%;
+  left: 4%;
+  transform: translate(-50%, -50%);
+  width: 9%;
+  height: 15%;
+  border-radius: 50%;
+  box-sizing: border-box !important;
+}
+.image-container img:hover {
+  filter: grayscale(50%); /* Apply grayscale filter on hover */
+  transition: filter 0.3s ease;
+  opacity: 1;
+}
+
+.form {
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-left: -30px;
+  margin-top: 60px;
+}
+
+.form > p {
+  text-align: right;
+}
+
+.form > p > a {
+  color: #000;
+  font-size: 14px;
+}
+.inputform
+
+.form-field {
+  height: 46px;
+  padding: 0 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Rubik', sans-serif;
+  outline: 0;
+  transition: .2s;
+  margin-top: 20px;
+}
+
+.form-field:focus {
+  border-color: #0f7ef1;
+}
+
+.form > button {
+  padding: 12px 10px;
+  border: 0;
+  background: #163663;
+  border-radius: 50px;
+  margin-top: 48px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: 'Rubik', sans-serif;
+  width: 266px;
+  margin-left: 84px;
+}
+.form > button:hover{
+  background-color: #333333;
+}
+.form > mat-radio-group{
+  margin-top: -53px;
+  margin-left: 220px;
+}
+.animation {
+  animation-name: move;
+  animation-duration: .2s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+}
+.inputleft{
+  width:  60%;
+}
+.inputright{
+  width:  60%;
+  margin-top: -88px;
+  margin-left: 209px;
+}
+.inputFull{
+  width: 395px;
+  margin-top: 20px;
+}
+.a1 {
+  animation-delay: 2s;
+}
+
+.a2 {
+  animation-delay: 2.1s;
+}
+
+.a3 {
+  animation-delay: 2.2s;
+}
+
+.a4 {
+  animation-delay: 2.3s;
+}
+
+.a5 {
+  animation-delay: 2.4s;
+}
+
+.a6 {
+  animation-delay: 2.5s;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes left {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+
+  100% {
+    opacity: 1;
+    padding: 20px 40px;
+    width: 440px;
+  }
+}

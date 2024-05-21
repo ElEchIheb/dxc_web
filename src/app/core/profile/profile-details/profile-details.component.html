@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="left">
+    <form #userForm="ngForm" [formGroup]="myform">
+    <div class="header">
+      <input #fileInput type="file" (change)="selectFile($event)" formControlName="file" style="display: none;">
+      <button  (click)="fileInput.click()">
+        <div class="image-container">
+      <img type="file" class=" animation a1"  [src]="imageUrl" alt="..." width="400" height="300" >
+    </div>
+      </button>
+      <div class="pp">
+      <h2 class="animation a1">{{firstName}} {{lastName}}</h2>
+      <h4 class="animation a2">{{posteName}}</h4>
+    </div>
+    </div>
+    <div class="form">
+      <mat-form-field appearance="outline" class="inputleft form-field animation a3">
+        <mat-label class="animation a3">first Name</mat-label>
+      <input matInput type="text" class="  animation a3" placeholder="first Name"  formControlName="firstName" value="{{firstName}}">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="inputright form-field animation a3">
+        <mat-label class="animation a3">last Name</mat-label>
+      <input matInput type="text" class=" animation a3" placeholder="last Name" formControlName="lastName" value="{{lastName}}">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="inputleft form-field animation a3">
+      <mat-label  class="animation a3">Telephone</mat-label>
+      <input matInput type="text" class="  animation a3" placeholder="telephone" formControlName="telephone" value="{{telephone}}">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="inputright form-field animation a3" >
+      <mat-label  class="animation a3">Department</mat-label>
+      <input matInput disabled type="text" class="  animation a3" placeholder="department" value="{{departmentName}}">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="inputleft form-field animation a3">
+      <mat-label  class="animation a3">Poste</mat-label>
+     <input matInput disabled type="text" class="  animation a3" placeholder="leaveBalance" value="{{leaveBalance}}">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="inputright form-field animation a3">
+      <mat-label  class="animation a3">Equipe</mat-label>
+     <input matInput disabled type="text" class="  animation a3" placeholder="sickLeaveBalance" value="{{sickLeaveBalance}}">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="inputleft form-field animation a3">
+      <mat-label  class="animation a3">email</mat-label>
+     <input matInput disabled type="text" class="  animation a3" placeholder="compensatoryTimeOffBalance" value="{{compensatoryTimeOffBalance}}">
+    </mat-form-field>
+      <mat-radio-group  class="animation a3" aria-label="Select an option" formControlName="gender" formControlName="gender">
+        <mat-radio-button #M value="M" [checked]="gender === 'M'">Homme</mat-radio-button>
+        <mat-radio-button #F value="F" [checked]="gender === 'F'">Femme</mat-radio-button>
+      </mat-radio-group>
+      <button class="animation a6" type="submit" (click)="updateProfile()">Profile Update</button>
+    </div>
+  </form>
+  </div>
+  <div class="right"></div>
+</div>
